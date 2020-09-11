@@ -15,6 +15,8 @@ public class TaskManagerApp {
     
     public static void main(String args[]) {
         TaskCommandInterface cli = new TaskCommandInterface();
+        cli.showEntryMessage();
+        
         System.out.println(cli.requireTaskTitle());
         System.out.println(cli.requireTaskDescription());
     }
