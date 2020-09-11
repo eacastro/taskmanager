@@ -18,4 +18,9 @@ public class TaskCommandInterface {
         System.out.println("Please introduce the title of your task");
         return sc.nextLine();
     }
+    
+    public String requireTaskDescription() {
+        System.out.println("Please, type the description of your task");
+        return sc.nextLine();
+    }
 }
