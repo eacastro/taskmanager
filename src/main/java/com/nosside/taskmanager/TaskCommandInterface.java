@@ -5,6 +5,8 @@
  */
 package com.nosside.taskmanager;
 
+import com.nosside.taskmanager.DAO.TaskDAO;
+import com.nosside.taskmanager.service.TaskService;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -37,12 +39,12 @@ public class TaskCommandInterface {
         checkOption(userResponse);
     }
 
-    public String requireTaskTitle() {
+    private String requireTaskTitle() {
         System.out.println("Please introduce the title of your task");
         return new Scanner(System.in).nextLine();
     }
 
-    public String requireTaskDescription() {
+    private String requireTaskDescription() {
         System.out.println("Please, type the description of your task");
         return new Scanner(System.in).nextLine();
     }
@@ -59,5 +61,7 @@ public class TaskCommandInterface {
     private void requireTaskInfo() {
         String title = requireTaskTitle();
         String description = requireTaskDescription();
+        
+        TaskService.createTask(title, description);       
     }
 }
