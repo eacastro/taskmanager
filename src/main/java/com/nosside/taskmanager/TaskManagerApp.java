@@ -14,7 +14,9 @@ import com.nosside.taskmanager.service.TaskService;
 public class TaskManagerApp {
     
     public static void main(String args[]) {
-        TaskService.createTask();
+        TaskCommandInterface cli = new TaskCommandInterface();
+        System.out.println(cli.requireTaskTitle());
+        System.out.println(cli.requireTaskDescription());
     }
     
 }
