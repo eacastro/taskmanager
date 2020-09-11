@@ -17,11 +17,7 @@ import java.sql.SQLException;
  * @author Edisson Castro
  */
 public class TaskDAO {
-    private TaskConnection databaseConnection;
-    
-    public TaskDAO() {
-        databaseConnection = TaskConnection.getInstance();
-    }
+    private final TaskConnection databaseConnection = TaskConnection.getInstance();
     
     // Create
     public void createTask(Task task) {
