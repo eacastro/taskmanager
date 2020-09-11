@@ -26,7 +26,7 @@ public class TaskConnection {
         }
     }
     
-    public TaskConnection getInstance() {
+    public static TaskConnection getInstance() {
         return new TaskConnection();
     }
     
