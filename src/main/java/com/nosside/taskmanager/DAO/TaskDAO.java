@@ -5,22 +5,13 @@
  */
 package com.nosside.taskmanager.DAO;
 
+import com.nosside.taskmanager.model.Task;
+
 /**
  *
  * @author Edisson Castro
  */
-public class TaskDAO {    
-    private String title;
-    private String description;
-    
-    public TaskDAO(String taskDescription) {
-        description = taskDescription;
-    }
-    
-    public TaskDAO(String taskTitle, String taskDescription) {        
-        title = taskTitle;
-        description = taskDescription;
-    }
+public class TaskDAO {
     
     // Create
     public void createTask(Task task) {
