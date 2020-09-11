@@ -14,13 +14,12 @@ import com.nosside.taskmanager.DAO.TaskDAO;
  */
 public class TaskService {
 
-    public static void createTask() {
+    public static void createTask(String title, String description) {
         Task myTaskToCreate = new Task();
-        myTaskToCreate.setTitle("Alimentar al gato");
-        myTaskToCreate.setDescription("Servir dos tazas de concentrado en el recipiente");
+        myTaskToCreate.setTitle(title);
+        myTaskToCreate.setDescription(description);
 
         TaskDAO myTaskDAO = new TaskDAO();
         myTaskDAO.createTask(myTaskToCreate);
-
     }
 }
