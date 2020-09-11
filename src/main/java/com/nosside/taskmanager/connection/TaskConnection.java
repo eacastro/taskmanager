@@ -17,7 +17,7 @@ public class TaskConnection {
     private Connection connection;
     
     private TaskConnection() {
-        String url = "jdbc:mysql://localhost/3306/taskmanager";
+        String url = "jdbc:mysql://localhost:3306/taskmanager";
         
         try {
             connection = DriverManager.getConnection(url, "root", "");
