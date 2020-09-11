@@ -7,6 +7,7 @@ package com.nosside.taskmanager.service;
 
 import com.nosside.taskmanager.model.Task;
 import com.nosside.taskmanager.DAO.TaskDAO;
+import com.nosside.taskmanager.model.OperationResult;
 
 /**
  *
@@ -16,10 +17,14 @@ public class TaskService {
 
     public static void createTask(String title, String description) {
         Task myTaskToCreate = new Task();
+        OperationResult createResult;
+        
         myTaskToCreate.setTitle(title);
         myTaskToCreate.setDescription(description);
 
         TaskDAO myTaskDAO = new TaskDAO();
-        myTaskDAO.createTask(myTaskToCreate);
+        createResult = myTaskDAO.createTask(myTaskToCreate);
+        
+        
     }
 }

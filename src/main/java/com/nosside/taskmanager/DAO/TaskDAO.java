@@ -21,7 +21,7 @@ public class TaskDAO {
     private final TaskConnection databaseConnection = TaskConnection.getInstance();
 
     // Create
-    public void createTask(Task task) {
+    public OperationResult createTask(Task task) {
         int rowsAffected = 0;
         OperationResult opRes = new OperationResult();
 
@@ -43,6 +43,8 @@ public class TaskDAO {
             opRes.setError(true);
             opRes.setDescriptionResult("It wasn't possible create your task");
         }
+        
+        return opRes;
     }
 
     // Read
