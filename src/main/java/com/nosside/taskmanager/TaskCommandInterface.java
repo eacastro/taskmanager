@@ -50,6 +50,12 @@ public class TaskCommandInterface {
     }
     
     private void checkOption(int option) {
-        
+        switch (option) {
+            case 1:
+                System.out.println("You've entered the option " + option);
+                break;
+                
+                
+        }
     }
 }
