@@ -14,8 +14,6 @@ import java.util.Scanner;
  */
 public class TaskCommandInterface {
 
-    private final Scanner sc = new Scanner(System.in);
-
     public void showEntryMessage() {
         System.out.println("Welcome to TaskManager!");
     }
@@ -28,9 +26,9 @@ public class TaskCommandInterface {
 
     public void waitForResponse() {
         int userResponse = 0;
-        
+
         try {
-            userResponse = sc.nextInt();
+            userResponse = new Scanner(System.in).nextInt();
         } catch (InputMismatchException e) {
             System.err.println("Error: You haven't entered a number"
                     + " (" + e.getMessage() + ")"
@@ -41,21 +39,25 @@ public class TaskCommandInterface {
 
     public String requireTaskTitle() {
         System.out.println("Please introduce the title of your task");
-        return sc.nextLine();
+        return new Scanner(System.in).nextLine();
     }
 
     public String requireTaskDescription() {
         System.out.println("Please, type the description of your task");
-        return sc.nextLine();
+        return new Scanner(System.in).nextLine();
     }
-    
+
     private void checkOption(int option) {
         switch (option) {
             case 1:
-                System.out.println("You've entered the option " + option);
+                requireTaskInfo();
                 break;
-                
-                
+
         }
+    }
+
+    private void requireTaskInfo() {
+        String title = requireTaskTitle();
+        String description = requireTaskDescription();
     }
 }
