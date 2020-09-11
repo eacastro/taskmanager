@@ -9,6 +9,40 @@ package com.nosside.taskmanager;
  *
  * @author Edisson Castro
  */
-public class TaskDAO {
+public class TaskDAO {    
+    private String title;
+    private String description;
+    
+    public TaskDAO(String taskDescription) {
+        description = taskDescription;
+    }
+    
+    public TaskDAO(String taskTitle, String taskDescription) {        
+        title = taskTitle;
+        description = taskDescription;
+    }
+    
+    // Create
+    public void createTask(Task task) {
+        
+    }
+    
+    // Read
+    public void fetchTask(Task task) {
+        
+    }
+    
+    // Update
+    public void modifyTask(Task task) {
+        
+    }
+    
+    // Delete
+    public void deleteTask(Task task) {
+        
+    }
+    
+    
+    
     
 }
