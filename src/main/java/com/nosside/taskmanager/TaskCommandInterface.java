@@ -14,6 +14,16 @@ import java.util.Scanner;
 public class TaskCommandInterface {
     private final Scanner sc = new Scanner(System.in);
     
+    public void showEntryMessage() {
+        System.out.println("Welcome to TaskManager!");
+    }
+    
+    public void showMenu() {
+        System.out.println("To get started, please choose an option:");
+        System.out.println("1 - Create a new task to do");
+        
+    }
+    
     public String requireTaskTitle() {
         System.out.println("Please introduce the title of your task");
         return sc.nextLine();
