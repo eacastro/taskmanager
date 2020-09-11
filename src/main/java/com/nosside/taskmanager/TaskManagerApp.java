@@ -5,8 +5,6 @@
  */
 package com.nosside.taskmanager;
 
-import com.nosside.taskmanager.service.TaskService;
-
 /**
  *
  * @author Edisson Castro
